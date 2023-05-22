@@ -2748,7 +2748,7 @@ class StyleElement extends HtmlElement {
     if (type != null && type != '' && type != 'text/css') {
       return null;
     }
-    final text = this.text;
+    final text = this.text??'';
     final parsed = css.parse(text);
     final styleSheet = CssStyleSheet.constructor();
     for (var node in parsed.topLevels) {
